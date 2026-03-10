@@ -1,9 +1,0 @@
-/* ============================================
-   main portfolio stylesheet — imports all modules
-   ============================================ */
-
-@import 'variables.css';
-@import 'cursor.css';
-@import 'loading.css';
-@import 'main.css';
-@import 'certifications.css';
