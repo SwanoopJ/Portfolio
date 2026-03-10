@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swanoop John — Senior Cloud & Systems Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&family=Bebas+Neue&family=Syne:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="cursor-trail-container"></div>
+
+<!-- Transition Overlay -->
+<div id="transition-overlay"></div>
+
+<!-- Ghost card — fixed, follows cursor -->
+<div id="ghost-card">
+  <div id="ghost-card-scan"></div>
+  <div id="ghost-card-dot"></div>
+  <div id="ghost-card-icon"></div>
+  <div id="ghost-card-name"></div>
+  <div id="ghost-card-detail"></div>
+</div>
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loading-screen">
+  <canvas id="splash-canvas"></canvas>
+  <div id="load-vignette"></div>
+
+  <!-- Title -->
+  <div id="splash-title-block">
+    <div id="splash-name">SWAN<span class="dot-under">O</span>OP&nbsp;&nbsp;JOHN</div>
+    <div id="splash-subtitle">Senior Cloud &amp; Systems Architect</div>
+  </div>
+
+  <!-- Arc progress ring -->
+  <div id="splash-ring-wrap">
+    <canvas id="splash-ring-canvas" width="160" height="160"></canvas>
+    <div id="splash-pct-wrap">
+      <div id="splash-pct-num">0</div>
+      <div id="splash-pct-sign">%</div>
+    </div>
+  </div>
+
+  <!-- Status message -->
+  <div id="splash-status">Initialising...</div>
+
+  <!-- Bottom bar -->
+  <div id="splash-bar-wrap">
+    <div id="splash-bar-track">
+      <div id="splash-bar-fill"></div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- ===== MAIN SITE ===== -->
+<div id="main-site">
+  <nav>
+    <div class="nav-logo">SJ</div>
+    <ul class="nav-links">
+      <li><a href="#hero">HOME</a></li>
+      <li><a href="#summary">ABOUT</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#education">CREDENTIALS</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+
+    <!-- LEFT: text content -->
+    <div class="hero-content">
+      <div class="hero-tag">SENIOR CLOUD & SYSTEMS ARCHITECT</div>
+      <h1>SWANOOP<br><span>JOHN</span></h1>
+      <p class="hero-sub">12+ years architecting, securing, and modernizing enterprise IT environments.<br>
+      Azure · AWS · Microsoft 365 · Zero Trust · Network Infrastructure</p>
+      <div class="hero-contact">
+        <span><span class="dot"></span> Kitchener, ON</span>
+        <a href="tel:5199986205"><span class="dot"></span> 519-998-6205</a>
+        <a href="/cdn-cgi/l/email-protection#e49793858a8b8b94a48389858d88ca878b89"><span class="dot"></span> <span class="__cf_email__" data-cfemail="cfbcb8aea1a0a0bf8fa8a2aea6a3e1aca0a2">[email&#160;protected]</span></a>
+        <a href="https://linkedin.com/in/swanoop" target="_blank"><span class="dot"></span> linkedin.com/in/swanoop</a>
+      </div>
+      <a href="#summary" class="cta-btn"><span>VIEW PROFILE</span></a>
+    </div>
+
+    <!-- RIGHT: honeycomb hex panel -->
+    <div class="hero-hex-panel" id="hero-hex-panel"></div>
+
+  </section>
+
+  <section id="summary">
+    <canvas id="summary-bg-canvas"></canvas>
+    <div class="section-header fade-up">
+      <span class="section-num">// 01</span>
+      <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="summary-intro fade-up">
+
+      <!-- LEFT: Status dashboard panel -->
+      <div id="ghost-zone">
+        <div id="status-panel">
+          <div class="sp-header">
+            <span class="sp-title">SYS_STATUS</span>
+            <span class="sp-live"><span class="sp-live-dot"></span>LIVE</span>
+          </div>
+
+          <div class="sp-uptime-row">
+            <span class="sp-label">UPTIME</span>
+            <span class="sp-uptime-val" id="sp-uptime">00:00:00</span>
+          </div>
+
+          <div class="sp-divider"></div>
+
+          <div class="sp-label">SKILL PROFICIENCY</div>
+          <div class="sp-bars">
+            <div class="sp-bar-row"><span>Azure / M365</span><div class="sp-bar"><div class="sp-fill" style="--pct:94%;--clr:#00f5ff"></div></div><span class="sp-pct">94%</span></div>
+            <div class="sp-bar-row"><span>Networking</span><div class="sp-bar"><div class="sp-fill" style="--pct:89%;--clr:#00c8ff"></div></div><span class="sp-pct">89%</span></div>
+            <div class="sp-bar-row"><span>Security</span><div class="sp-bar"><div class="sp-fill" style="--pct:85%;--clr:#ff6b35"></div></div><span class="sp-pct">85%</span></div>
+            <div class="sp-bar-row"><span>Virtualisation</span><div class="sp-bar"><div class="sp-fill" style="--pct:91%;--clr:#00f5ff"></div></div><span class="sp-pct">91%</span></div>
+            <div class="sp-bar-row"><span>Cloud Infra</span><div class="sp-bar"><div class="sp-fill" style="--pct:88%;--clr:#00c8ff"></div></div><span class="sp-pct">88%</span></div>
+          </div>
+
+          <div class="sp-divider"></div>
+
+          <div class="sp-label">SERVICE STATUS</div>
+          <div class="sp-services">
+            <div class="sp-svc"><span class="sp-svc-dot green"></span>Azure AD Sync</div>
+            <div class="sp-svc"><span class="sp-svc-dot green"></span>FortiGate HA</div>
+            <div class="sp-svc"><span class="sp-svc-dot green"></span>Veeam Backup</div>
+            <div class="sp-svc"><span class="sp-svc-dot pulse"></span>Defender ATP</div>
+          </div>
+
+          <div class="sp-divider"></div>
+
+          <div class="sp-footer">
+            <span class="sp-cert">AZ-104</span>
+            <span class="sp-cert">PCNSA</span>
+            <span class="sp-cert">CCNA</span>
+            <span class="sp-cert">AWS-CP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTRE: Laptop with orbit rings + particles -->
+      <div class="summary-center">
+        <canvas id="laptop-particle-canvas"></canvas>
+        <div class="laptop-glow"></div>
+        <div class="orbit-ring orbit-ring-3"></div>
+        <div class="orbit-ring orbit-ring-2"></div>
+        <div class="orbit-ring orbit-ring-1"></div>
+
+        <div class="laptop-trigger" id="laptop-trigger">
+          <div class="laptop-svg-wrap">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="8" width="140" height="90" rx="6" fill="rgba(5,10,20,0.95)" stroke="rgba(0,245,255,0.5)" stroke-width="2"/>
+              <rect x="36" y="14" width="128" height="78" rx="3" fill="rgba(0,245,255,0.04)"/>
+              <line x1="48" y1="32" x2="100" y2="32" stroke="rgba(40,200,64,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="48" y1="44" x2="152" y2="44" stroke="rgba(200,216,232,0.3)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="48" y1="54" x2="140" y2="54" stroke="rgba(200,216,232,0.25)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="48" y1="64" x2="148" y2="64" stroke="rgba(200,216,232,0.2)" stroke-width="1" stroke-linecap="round"/>
+              <line x1="48" y1="74" x2="130" y2="74" stroke="rgba(0,245,255,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+              <rect x="134" y="70" width="6" height="8" rx="1" fill="rgba(0,245,255,0.9)">
+                <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+              </rect>
+              <rect x="28" y="96" width="144" height="5" rx="2" fill="rgba(0,245,255,0.15)" stroke="rgba(0,245,255,0.3)" stroke-width="1"/>
+              <path d="M10 101 Q10 110 20 110 L180 110 Q190 110 190 101 L28 101 Z" fill="rgba(10,22,40,0.9)" stroke="rgba(0,245,255,0.3)" stroke-width="1.5"/>
+              <rect x="82" y="113" width="36" height="22" rx="4" fill="rgba(0,245,255,0.06)" stroke="rgba(0,245,255,0.2)" stroke-width="1"/>
+              <ellipse cx="100" cy="130" rx="60" ry="6" fill="rgba(0,245,255,0.08)"/>
+            </svg>
+            <div class="laptop-click-label">click here</div>
+          </div>
+          <div class="laptop-sub">view profile.txt</div>
+        </div>
+      </div>
+
+      <!-- CMD popup (positioned by existing CSS) -->
+      <div class="summary-left">
+        <div class="cmd-overlay" id="cmd-overlay">
+          <div class="cmd-modal" id="cmd-terminal">
+            <div class="cmd-titlebar">
+              <div class="cmd-dots">
+                <div class="cmd-dot red" id="cmd-close-dot"></div>
+                <div class="cmd-dot yellow"></div>
+                <div class="cmd-dot green"></div>
+              </div>
+              <div class="cmd-title">swanoop@portfolio ~ /about</div>
+              <div class="cmd-close-btn" id="cmd-close-btn">ESC</div>
+            </div>
+            <div class="cmd-body" id="cmd-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Scrolling log panel -->
+      <div class="summary-right">
+        <div class="log-panel">
+          <div class="log-panel-bar">
+            <div class="log-panel-dot r"></div>
+            <div class="log-panel-dot y"></div>
+            <div class="log-panel-dot g"></div>
+            <div class="log-panel-title">system.log — live</div>
+            <div class="log-live-dot"></div>
+          </div>
+          <div class="log-scroll-window">
+            <div class="log-track" id="log-track">
+              <!-- lines injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div><!-- /.summary-right -->
+
+    </div><!-- /.summary-intro -->
+
+  </section>
+
+  <section id="skills">
+    <div class="section-header fade-up">
+      <span class="section-num">// 02</span>
+      <h2 class="section-title">CORE TECHNICAL COMPETENCIES</h2>
+      <div class="section-line"></div>
+    </div>
+    <!-- Stats tiles -->
+    <div class="stats-row fade-up">
+      <div class="stat-tile featured">
+        <div class="stat-num">12<sup>+</sup></div>
+        <div class="stat-label">Years of Experience</div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-num">6<sup>+</sup></div>
+        <div class="stat-label">Certs Earned</div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-num">50<sup>+</sup></div>
+        <div class="stat-label">Projects Delivered</div>
+        <div class="stat-dot"></div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Tech Domains</div>
+        <div class="stat-dot"></div>
+      </div>
+    </div>
+
+    <div class="skills-marquee-wrap fade-up">
+      <div class="skills-track" id="skills-track">
+        <!-- set A -->
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🖥️</span>
+          <div class="skill-card-title">Windows Infrastructure</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Windows Server 2016–2025</span><span class="skill-card-tag">Active Directory</span><span class="skill-card-tag">DNS</span><span class="skill-card-tag">DHCP</span><span class="skill-card-tag">GPO</span><span class="skill-card-tag">PKI</span><span class="skill-card-tag">WDS</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">☁️</span>
+          <div class="skill-card-title">Microsoft 365 & Identity</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Exchange Online</span><span class="skill-card-tag">Teams</span><span class="skill-card-tag">SharePoint</span><span class="skill-card-tag">Intune</span><span class="skill-card-tag">Autopilot</span><span class="skill-card-tag">Entra ID</span><span class="skill-card-tag">MFA</span><span class="skill-card-tag">RBAC</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">⚡</span>
+          <div class="skill-card-title">Cloud Platforms</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Azure VMs</span><span class="skill-card-tag">VNets</span><span class="skill-card-tag">NSGs</span><span class="skill-card-tag">AVD</span><span class="skill-card-tag">AWS EC2</span><span class="skill-card-tag">IAM</span><span class="skill-card-tag">VPC</span><span class="skill-card-tag">Azure Policy</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🔒</span>
+          <div class="skill-card-title">Networking & Security</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">FortiGate HA</span><span class="skill-card-tag">Palo Alto</span><span class="skill-card-tag">VLAN</span><span class="skill-card-tag">SD-WAN</span><span class="skill-card-tag">IPsec VPN</span><span class="skill-card-tag">IPS/IDS</span><span class="skill-card-tag">BGP</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">⚙️</span>
+          <div class="skill-card-title">Virtualization & HA</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Hyper-V</span><span class="skill-card-tag">VMware vSphere</span><span class="skill-card-tag">Failover Clustering</span><span class="skill-card-tag">vMotion</span><span class="skill-card-tag">DRS</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🛡️</span>
+          <div class="skill-card-title">Security & Compliance</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Defender for Endpoint</span><span class="skill-card-tag">SIEM</span><span class="skill-card-tag">NIST</span><span class="skill-card-tag">CIS Benchmarks</span><span class="skill-card-tag">Zero Trust</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🐧</span>
+          <div class="skill-card-title">Platforms & OS</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Ubuntu</span><span class="skill-card-tag">CentOS</span><span class="skill-card-tag">RHEL</span><span class="skill-card-tag">macOS Enterprise</span><span class="skill-card-tag">PowerShell</span><span class="skill-card-tag">Bash</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">💾</span>
+          <div class="skill-card-title">Backup & DR</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Veeam</span><span class="skill-card-tag">Unitrends</span><span class="skill-card-tag">Azure Backup</span><span class="skill-card-tag">RTO/RPO</span><span class="skill-card-tag">DR Planning</span></div>
+        </div></div>
+        <!-- set B — duplicate for seamless loop -->
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🖥️</span>
+          <div class="skill-card-title">Windows Infrastructure</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Windows Server 2016–2025</span><span class="skill-card-tag">Active Directory</span><span class="skill-card-tag">DNS</span><span class="skill-card-tag">DHCP</span><span class="skill-card-tag">GPO</span><span class="skill-card-tag">PKI</span><span class="skill-card-tag">WDS</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">☁️</span>
+          <div class="skill-card-title">Microsoft 365 & Identity</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Exchange Online</span><span class="skill-card-tag">Teams</span><span class="skill-card-tag">SharePoint</span><span class="skill-card-tag">Intune</span><span class="skill-card-tag">Autopilot</span><span class="skill-card-tag">Entra ID</span><span class="skill-card-tag">MFA</span><span class="skill-card-tag">RBAC</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">⚡</span>
+          <div class="skill-card-title">Cloud Platforms</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Azure VMs</span><span class="skill-card-tag">VNets</span><span class="skill-card-tag">NSGs</span><span class="skill-card-tag">AVD</span><span class="skill-card-tag">AWS EC2</span><span class="skill-card-tag">IAM</span><span class="skill-card-tag">VPC</span><span class="skill-card-tag">Azure Policy</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🔒</span>
+          <div class="skill-card-title">Networking & Security</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">FortiGate HA</span><span class="skill-card-tag">Palo Alto</span><span class="skill-card-tag">VLAN</span><span class="skill-card-tag">SD-WAN</span><span class="skill-card-tag">IPsec VPN</span><span class="skill-card-tag">IPS/IDS</span><span class="skill-card-tag">BGP</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">⚙️</span>
+          <div class="skill-card-title">Virtualization & HA</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Hyper-V</span><span class="skill-card-tag">VMware vSphere</span><span class="skill-card-tag">Failover Clustering</span><span class="skill-card-tag">vMotion</span><span class="skill-card-tag">DRS</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🛡️</span>
+          <div class="skill-card-title">Security & Compliance</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Defender for Endpoint</span><span class="skill-card-tag">SIEM</span><span class="skill-card-tag">NIST</span><span class="skill-card-tag">CIS Benchmarks</span><span class="skill-card-tag">Zero Trust</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">🐧</span>
+          <div class="skill-card-title">Platforms & OS</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Ubuntu</span><span class="skill-card-tag">CentOS</span><span class="skill-card-tag">RHEL</span><span class="skill-card-tag">macOS Enterprise</span><span class="skill-card-tag">PowerShell</span><span class="skill-card-tag">Bash</span></div>
+        </div></div>
+        <div class="skill-card-wrap"><div class="skill-card">
+          <span class="skill-cat-icon">💾</span>
+          <div class="skill-card-title">Backup & DR</div>
+          <div class="skill-card-tags"><span class="skill-card-tag">Veeam</span><span class="skill-card-tag">Unitrends</span><span class="skill-card-tag">Azure Backup</span><span class="skill-card-tag">RTO/RPO</span><span class="skill-card-tag">DR Planning</span></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-header fade-up">
+      <span class="section-num">// 03</span>
+      <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="exp-journey-list">
+
+      <!-- ── AUDCOMP ── -->
+      <div class="exp-journey fade-up" data-color="0,245,255">
+        <div class="exj-trigger">
+          <div class="exj-icon-ring"></div>
+          <div class="exj-icon exj-icon-img">
+            <img src="https://audcomp.com/wp-content/uploads/2023/10/AUDCOMP-LOGO-white-logo-1.png" alt="AUDCOMP" onerror="this.parentElement.innerHTML='🏢'">
+          </div>
+          <div class="exj-company">AUDCOMP</div>
+          <div class="exj-period">2023 – PRESENT</div>
+          <div class="exj-hint">CLICK TO EXPLORE</div>
+        </div>
+        <div class="exj-branch-wrap">
+          <canvas class="exj-canvas"></canvas>
+          <div class="exj-branch-nodes">
+            <div class="exj-node" data-side="left">Architect and manage infrastructure for 150+ enterprise and public-sector environments</div>
+            <div class="exj-node" data-side="right">Provide Level 3 escalation for network, cloud, firewall, and identity-related incidents</div>
+            <div class="exj-node" data-side="left">Administer Windows Server 2016–2025 including AD, DNS, DHCP, PKI, and RBAC</div>
+            <div class="exj-node" data-side="right">Design SSO/SAML integrations via Entra ID with conditional access and security policies</div>
+            <div class="exj-node" data-side="left">Design FortiGate HA clusters, IPS/IDS configurations, and VLAN segmentation</div>
+            <div class="exj-node" data-side="right">Oversee Microsoft Intune deployments with compliance baselines and endpoint hardening</div>
+            <div class="exj-node" data-side="left">Implement Zero Trust security models and MFA across all environments</div>
+            <div class="exj-node" data-side="right">Manage Hyper-V & VMware platforms including clustering and storage optimisation</div>
+            <div class="exj-node" data-side="left">Develop disaster recovery strategies with defined RTO/RPO and failover testing</div>
+            <div class="exj-node" data-side="right">Lead Azure hybrid deployments integrating on-premises AD with Entra ID via AD Connect</div>
+            <div class="exj-node" data-side="left">Configure and maintain SD-WAN solutions with BGP routing and QoS policies</div>
+            <div class="exj-node" data-side="right">Automate server provisioning and configuration using PowerShell and Ansible playbooks</div>
+            <div class="exj-node" data-side="left">Monitor infrastructure performance with SIEM tooling and resolve incidents within SLA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── GOSH MSP ── -->
+      <div class="exp-journey fade-up" data-color="255,107,53">
+        <div class="exj-trigger">
+          <div class="exj-icon-ring"></div>
+          <div class="exj-icon">🖥️</div>
+          <div class="exj-company">GOSH MSP</div>
+          <div class="exj-period">2016 – 2021</div>
+          <div class="exj-hint">CLICK TO EXPLORE</div>
+        </div>
+        <div class="exj-branch-wrap">
+          <canvas class="exj-canvas"></canvas>
+          <div class="exj-branch-nodes">
+            <div class="exj-node" data-side="left">Managed 45+ production servers across Azure, Hyper-V, and on-premises environments</div>
+            <div class="exj-node" data-side="right">Provided advanced L3 support for routing, VPN, firewall, and secure remote access</div>
+            <div class="exj-node" data-side="left">Administered Microsoft 365 tenant security, identity modernisation, and migration projects</div>
+            <div class="exj-node" data-side="right">Implemented network security improvements including segmentation and access controls</div>
+            <div class="exj-node" data-side="left">Maintained enterprise backup, disaster recovery, and compliance documentation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── UNITED TECHNOLOGIES ── -->
+      <div class="exp-journey fade-up" data-color="100,180,255">
+        <div class="exj-trigger">
+          <div class="exj-icon-ring"></div>
+          <div class="exj-icon">🏭</div>
+          <div class="exj-company">UNITED TECHNOLOGIES</div>
+          <div class="exj-period">2014 – 2016</div>
+          <div class="exj-hint">CLICK TO EXPLORE</div>
+        </div>
+        <div class="exj-branch-wrap">
+          <canvas class="exj-canvas"></canvas>
+          <div class="exj-branch-nodes">
+            <div class="exj-node" data-side="left">Supported 4,500+ users and 150+ VMware servers in a large enterprise environment</div>
+            <div class="exj-node" data-side="right">Administered Active Directory, SCCM, WSUS, DNS, DHCP, Exchange, and SQL Server</div>
+            <div class="exj-node" data-side="left">Performed security hardening, patch lifecycle management, and compliance alignment</div>
+            <div class="exj-node" data-side="right">Maintained enterprise ITSM systems ensuring SLA adherence and operational stability</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <canvas id="cert-particles"></canvas>
+    <div class="section-header fade-up">
+      <span class="section-num">// 04</span>
+      <h2 class="section-title">EDUCATION & CERTIFICATIONS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="edu-grid">
+
+      <!-- ACADEMIC: single unified journey -->
+      <div class="edu-box fade-up">
+        <div class="edu-box-title">ACADEMIC CREDENTIALS</div>
+
+        <div class="edu-journey-card" id="ej-unified">
+          <div class="ej-icon-wrap">
+            <div class="ej-icon">🎓</div>
+            <div class="ej-icon-ring"></div>
+            <div class="ej-hint">TAP TO JOURNEY</div>
+          </div>
+          <div class="ej-road-wrap">
+            <canvas class="ej-canvas"></canvas>
+            <!-- BSc label at midpoint -->
+            <div class="ej-midpoint-label">
+              <div class="ej-mid-degree">Bachelor of Science</div>
+              <div class="ej-mid-field">Information Technology · 2009</div>
+            </div>
+            <!-- Final destination -->
+            <div class="ej-destination">
+              <div class="ej-dest-name">Conestoga College</div>
+              <div class="ej-dest-degree">Post Graduate Diploma</div>
+              <div class="ej-dest-field">IT & Network Security · 2023</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="edu-box fade-up">
+        <div class="edu-box-title">PROFESSIONAL CERTIFICATIONS</div>
+
+        <!-- Row 1: 3 tiles -->
+        <div class="cert-row cert-row-3">
+          <div class="cert-tile fade-up">
+            <div class="cert-tile-icon">☁️</div>
+            <div class="cert-tile-body">
+              <div class="cert-tile-header">
+                <div class="cert-tile-name">AZ-104 Azure Administrator</div>
+                <span class="cert-tile-badge cloud">Cloud</span>
+              </div>
+              <div class="cert-tile-issuer">Microsoft · Azure</div>
+            </div>
+          </div>
+          <div class="cert-tile fade-up">
+            <div class="cert-tile-icon">🔥</div>
+            <div class="cert-tile-body">
+              <div class="cert-tile-header">
+                <div class="cert-tile-name">Palo Alto PCNSA</div>
+                <span class="cert-tile-badge security">Security</span>
+              </div>
+              <div class="cert-tile-issuer">Palo Alto Networks</div>
+            </div>
+          </div>
+          <div class="cert-tile fade-up">
+            <div class="cert-tile-icon">⚡</div>
+            <div class="cert-tile-body">
+              <div class="cert-tile-header">
+                <div class="cert-tile-name">AWS Cloud Practitioner</div>
+                <span class="cert-tile-badge cloud">Cloud</span>
+              </div>
+              <div class="cert-tile-issuer">Amazon Web Services</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 2 tiles -->
+        <div class="cert-row cert-row-2">
+          <div class="cert-tile fade-up">
+            <div class="cert-tile-icon">🌐</div>
+            <div class="cert-tile-body">
+              <div class="cert-tile-header">
+                <div class="cert-tile-name">CCNA</div>
+                <span class="cert-tile-badge active">Active</span>
+              </div>
+              <div class="cert-tile-issuer">Cisco · Networking</div>
+            </div>
+          </div>
+          <div class="cert-tile fade-up">
+            <div class="cert-tile-icon">🖥️</div>
+            <div class="cert-tile-body">
+              <div class="cert-tile-header">
+                <div class="cert-tile-name">Microsoft MCSA</div>
+                <span class="cert-tile-badge active">Active</span>
+              </div>
+              <div class="cert-tile-issuer">Microsoft · Windows Server</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: 1 tile centred -->
+        <div class="cert-row cert-row-1">
+          <div class="cert-tile fade-up">
+            <div class="cert-tile-icon">🛡️</div>
+            <div class="cert-tile-body">
+              <div class="cert-tile-header">
+                <div class="cert-tile-name">Certified in Cybersecurity (CC)</div>
+                <span class="cert-tile-badge security">Security</span>
+              </div>
+              <div class="cert-tile-issuer">ISC² · Security</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-name">SWANOOP JOHN</div>
+    <div class="footer-copy">SENIOR CLOUD & SYSTEMS ARCHITECT · KITCHENER, ON</div>
+  </footer>
+</div>
+
+<!-- Scripts -->
+<script src="js/cursor.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/summary.js"></script>
+<script src="js/experience.js"></script>
+<script src="js/education.js"></script>
+<script src="js/certifications.js"></script>
+<script src="js/ghost-card.js"></script>
+<script src="js/starfield.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
